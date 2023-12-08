@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Website!!</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			background-color: #000080;
+        }
+
+        header {
+            background-color: #008080;
+
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+footer {
+			background-color:#008080;
+			padding: 2px;
+			text-align: center;
+			color: white;
+			position: absolute:
+			bottom: 0;
+			box-shadow: 0 0 5px;
+}
+h4 {
+			color: #008080;
+			text-align: center;
+}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #008080;
+            padding: 5px;
+			border: 1px solid white;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            background-color: #008080;
+        }
+
+
+        section {
+            padding: 60px 20px 20px;
+
+
+
+         
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        .user-profile img {
+
+    		border-radius: 50%;
+    		margin-right: 10px;
+        }
+.container1{
+            flex: 1;
+            margin: 10px;
+            padding: 10px; 
+            border: 1px solid #008080;
+			box-shadow: 0 0 5px; 
+background-color: White;
+text-align: center;
+margin-top: 0px;
+        }
+.container2{
+            flex: 1;
+            padding: 0px; 
+            border: 1px solid black;
+background-color: White;
+text-align: center;
+margin-top: 0px;
+width: 100;
+
+max-width: 500;
+        }
+.container3{
+            flex: 1 ;
+            margin: 10px;
+            padding: 10px; 
+            border: 1px solid black;
+background-color: White;
+width: 30%;
+max-width: 100%;
+        }
+
+        .image-container {
+flex: 1;
+            display: block;
+            margin: 0 0 10px 10pxs;
+padding: 5px;
+margin-right: 1px;
+        }
+
+      .slider-container {
+
+            width: 45%;
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+			padding: 5px;
+			
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+       
+        }
+
+        .right-image {
+            float: right;
+
+margin: auto;
+padding: 5px;
+        }
+
+       
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+margin-right: 0px;
+        }
+
+         .text-beside-image {
+margin-top: 0;
+            margin-right:
+            padding: 10px;
+
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+</head>
+<body>
+
+ 
+
+    <nav>
+        <div>
+<a href="C:\Users\Rusty\Desktop\capena\index.html">Homepage</a>
+<a href="capblog.html">IT111 Blog Entries</a>
+<a href="capflex.html">Flex Page</a>
+        </div>
+
+
+    </nav>
+
+
+
+    <section id="flex">
+        <h2>Flex Page</h2>
+        
+
+<div class="slider-container">
+
+        <div class="slides">
+            <div class="slide"><img src="img/trexie.jpg" alt="Image 1" width="100%" height="100%"></div>
+            <div class="slide"><img src="img/parents.jpg" alt="Image 2" width="100%" height="100%"></div>
+			<div class="slide"><img src="img/grad pic.jpg" alt="Image 3"  width="100%" height="100%"></div>
+			<div class="slide"><img src="img/badminton.jpeg" alt="Image 4"  width="100%" height="100%"></div>
+			<div class="slide"><img src="img/badminton1.jpeg" alt="Image 5"  width="100%" height="100%"></div>
+			<div class="slide"><img src="img/medals.jpg" alt="Image 6"  width="100%" height="100%"></div>
+			
+
+			
+			
+            <!-- Add more slides with images -->
+        </div>
+
+<div class="prev" onclick="plusSlides(-1)">❮</div>
+        <div class="next" onclick="plusSlides(1)">❯</div>
+</div>
+
+    </section>
+
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            if (n > totalSlides) {
+
+                slideIndex = 1;
+            } else if (n < 1) {
+                slideIndex = totalSlides;
+            }
+
+            slides.style.transform = `translateX(${-100 * (slideIndex - 1)}%)`;
+        }
+    </script>
+<footer>
+
+<h3> Alright Reserved @2023 </h3>
+</footer>
+
+</body>
+</html>
